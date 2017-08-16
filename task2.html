@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome to Chat Room</title>
+	<meta http-equiv="X-UA-Compatible" content="IE-edge"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+  	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+
+	<script type="text/javascript">
+		<!--
+
+		  function chat() {
+//		  	alert("You are in Chat Room");
+
+
+		  	fetch('http://localhost/chats.json').then(function(response){
+		  		return response.json();
+		  		console.log(response.json());
+		  	}).then(function(json){
+		  		    console.log(json);
+
+		     		json.message.forEach(function(msg){		
+		     			
+  					var li=document.createElement("LI");
+
+  					var text=document.createTextNode(msg.msg);
+  					li.appendChild(text);	
+
+  					document.getElementById('line').appendChild(li);
+  					$("ul>li").each(function(i,val){
+  						$(this).css("color",i & 1? "#FF8000" : "#8080C0");
+  					})
+
+  				})
+		  	})
+		  }
+
+		//-->
+	</script>
+
+	<!--CSS code-->
+	<style type="text/css">
+		body
+		{
+			background-color: #00264d;
+
+		}
+
+    .div
+    {
+      background-image: url('http://bgfons.com/uploads/cloth/cloth_texture625.jpg');
+    }
+
+    h1
+    {
+      background-image: url('http://ak7.picdn.net/shutterstock/videos/137986/thumb/1.jpg');
+    }
+
+    .outline
+    {
+      background:none;
+      padding: 12px 22px;
+      border: 2px solid;
+      color: #0099cc;
+      background: -moz-linear-gradient(top,  #66b2cc 50%, #33a6cc 50%);
+      -webkit-box-shadow: 0 10px 6px -6px #777;
+      -moz-box-shadow:0 10px 6px -6px #777;
+      box-shadow: 0 10px 6px -6px #777;
+      border-radius: 24px;
+    }
+
+    .out
+    {
+       background:none;
+      padding: 12px 22px;
+      border: 2px solid;
+      color: #0099cc;
+      background: -moz-linear-gradient(top,  #66b2cc 50%, #33a6cc 50%);
+    }
+
+    }
+
+	</style>
+</head>
+<body>
+  
+  	<div class="jumbotron">
+  		<h1 align="center" style="color: white;">Welcome to Chat Room</h1>
+  	</div>
+
+  	<input type="button" name="button" href="#about" class="btn-lg btn btn-primary btn-center outline" data-toggle="collapse" value="Show Chat" onclick="chat()" style="margin-left:570px;">
+
+  	<div class="div pre-srollable" style="display:block; height:500px; width: 500px; border: 0.5px solid black; margin: 20px auto; background-color: #696969; margin-left:400px; color:#ffffff; padding: 20px; position: absolute; overflow: scroll;">
+      
+      <div class="container div" style="position: absolute;">
+        <h2 class="panel-heading out" style="margin-right: 50px;">User1</h2>
+        <div class="panel panel-primary">
+          <div class="panel-body"> <ul id="line" style="list-style: none; font-family: Helvetica Neue"></ul> </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container">
+        <p class="text-primary" style="position: fixed;">Created By:<u>Vaibhav Mandlik</u></p>
+    </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
