@@ -1,0 +1,39 @@
+<script>
+  		
+  			var a=new Date();
+        var day=a.getDate();
+        var month=1+a.getMonth();
+        var year=a.getFullYear();
+        var d=new Date();
+        var hr=d.getHours();
+        var min=d.getMinutes();
+        var x;
+
+        var date=day + "/" + month + "/" +year;
+        var date1=month + "/" + day + "/" + year;
+
+
+  			console.log('Date function');
+  			document.write("Date Format 1: " +date + "<br>");
+        document.write("Date Format 2: " +date1);
+
+        if(hr > 12)
+        {
+        	hr = hr - 12;
+        }
+        
+        if(hr>=12)
+        {
+           x= "AM" ;
+        }
+        else
+        {
+        	x="PM";
+        }
+
+        var time=hr + ":" + min + "  " +x;
+        var dat1=1+d.getMonth().toString() + "/" +  d.getDay().toString() + "/" + d.getYear().toString();
+
+        document.write("<br>");
+        document.write("Time is: " + time);
+  	</script>
