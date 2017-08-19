@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Farenheit to Celcius</title>
+
+  	<script>
+  		function cal()
+  		{
+  			var s1,s2;
+  			
+  			s1=document.getElementById('far').value;
+
+  			s2=(s1-32)/9*5;
+
+  			document.getElementById("cel").innerHTML=s2;
+  		}
+  	</script>
+
+<style>
+	body
+	{
+		background-color: #000000;
+
+	}
+</style>
+</head>
+<body>
+	<h1 align="center" >Farenheit to Celcius</h1>
+
+  	<label class="col-sm-3 control-label" style="color: grey; margin-left: 220px;">Enter Temprature in Farenheit: </label>
+  
+  	<input type="text" id="far" class="form-control" placeholder="Temprature in Fahrenheit">
+  <br><br>
+  	<input type="button" value="Calculate" onclick="cal()" style="margin-left:500px; margin-top: 30px;">
+
+<br><br>
+  	<label align="center" style=" color: grey; margin-left:240px;">Temprature in Celcius is</label>
+  	<p style=" color: grey; margin-left:270px; margin-top: 30px; position: absolute;" id="cel">a</p>
+</body>
+</html>
