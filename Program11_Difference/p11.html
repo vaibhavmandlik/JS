@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		function diff()
+		 {
+			var a=document.getElementById("get").value,b;
+
+		if(a>13)
+		   b= a-13-13;
+		else
+			b= a-13;
+
+		document.getElementById("disp").innerHTML=b;
+			
+		}
+	</script>
+</head>
+<body>
+  <input type="text" id="get" placeholder="Enter Number"><br><br>
+  <input type="button" value="Calculate" onclick="diff()"><br><br>
+  <label id="disp">Difference is :</label>
+</body>
+</html>
