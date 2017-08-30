@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Data Validation</title>
+	<script src="/home/vaibhav/Vaibhav/Vaibhav/Study_Folder/HTML/avi.js"></script>
+
+	<?php
+
+	your php code
+
+
+
+
+	?>
+</head>
+<body>
+<form method="post" name="myform">
+	Name: <input type="text" id="name" name="nam" required><br><br>
+	Email: <input type="email" id="email" required><br><br>
+	Password: <input type="password" name="pass" required><br><br>
+	Country code: <input type="text" name="c_code" required><br><br>
+	device id: <input type="text" id="device" required><br><br>
+	device token:<input type="text" id="d_token" required><br><br>
+	address:<input type="text" name="add" required><br><br>
+	city:<input type="text" name="city" required><br><br>
+	state:<input type="text" name="state" required><br><br>
+	phone:<input type="text" name="phn" min="10" max="10"><br><br>
+	<input type="button" value="submit" onClick="valid()">
+</form>
+</body>
+</html>
